@@ -1,4 +1,6 @@
-﻿@{
+﻿@using System.Net
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,3 +8,25 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<textarea id="editor"></textarea>
+<script>
+    var editor = CodeMirror.fromTextArea
+    (document.getElementById('editor'), {
+        mode: "clike",
+        theme: "dracula"
+    });
+</script>
+
+@{
+    // Ask the PresenterApp for data
+    // DEFINE an object to hold the response
+    // WHILE TRUE
+        // MAKE the request
+        // IF response == Exception
+            // raise Exception 
+            // continue
+        // ELSE 
+            // render the response to the screen (Maybe send to JS or can inject directly into the tag I cant Remember)
+    //var ResponsePresenter = new HttpClient();
+    
+}
